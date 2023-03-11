@@ -47,6 +47,16 @@ const NavBar = () => {
             ))}
           </div>
         </div>
+        {/* SEARCH BOX */}
+        <div className={Style.NavBar_box_middle}>
+          <div className={Style.NavBar_box_middle_search}>
+            <div className={Style.NavBar_box_middle_search_img}>
+              <Image src={images.search} alt="search" width={20} height={20} />
+            </div>
+            {/* INPUT SECTION */}
+            <input type="text" placeholder="Search Tokens" />
+          </div>
+        </div>
         <div className={Style.NavBar_box_right}>Right</div>
       </div>
     </div>
