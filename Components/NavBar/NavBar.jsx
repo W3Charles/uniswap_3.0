@@ -21,7 +21,12 @@ const NavBar = () => {
       name: "Pools",
       link: "/",
     },
-  ]
+  ];
+  
+  //USESTATE
+  const [openModal, setOpenModal] = useState(false);
+  const [openTokenBox, setOpenTokenBox] = useState(false)
+  
   return (
     <div>NavBar</div>
   )
