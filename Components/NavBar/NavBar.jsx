@@ -57,7 +57,16 @@ const NavBar = () => {
             <input type="text" placeholder="Search Tokens" />
           </div>
         </div>
-        <div className={Style.NavBar_box_right}>Right</div>
+        {/* RIGHT SECTION */}
+        <div className={Style.NavBar_box_right}>
+          <div className={Style.NavBar_box_right_box}>
+            <div className={Style.NavBar_box_right_box_img}>
+              <Image src={images.ether} alt="Network" height={30} width={30} />
+            </div>
+            <p>Network Name</p>
+          </div>
+          <button onClick={() => {}}>Address</button>
+        </div>
       </div>
     </div>
   )
