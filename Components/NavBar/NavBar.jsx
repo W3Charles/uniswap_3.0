@@ -8,6 +8,20 @@ import images from '../../assets';
 import { Modal, TOkenList } from '../index';
 
 const NavBar = () => {
+  const menuItems = [
+    {
+      name: "Swap",
+      link: "/",
+    },
+    {
+      name: "Tokens",
+      link: "/",
+    },
+    {
+      name: "Pools",
+      link: "/",
+    },
+  ]
   return (
     <div>NavBar</div>
   )
