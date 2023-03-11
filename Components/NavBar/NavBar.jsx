@@ -66,10 +66,10 @@ const NavBar = () => {
             <p>Network Name</p>
           </div>
           <button onClick={() => {}}>Address</button>
-
-          (openModal && (
+          
+          {openModal && (
             <Modal setOpenModal={setOpenModal} connectWallet="Connect" />
-          ))
+          )}
         </div>
       </div>
 
