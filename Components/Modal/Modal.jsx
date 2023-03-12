@@ -3,14 +3,41 @@ import Image from 'next/image';
 
 //INTERNAL IMPORTS
 import Style from './Modal.module.css';
-import images from './,,/../assets';
+import images from './../../assets';
 
 const Modal = ({ setOpenModal, connectWallet }) => {
   //USESTATE
   const walletMenu = ["MetaMask", "Coinbase", "Wallet", "WalletConnect"];
-  
   return (
-    <div>Modal</div>
+    <div className={Style.Modal}>
+      <div className={Style.Modal_box}>
+        <div className={Style.Modal_box_heading}>
+          <p>Connect a wallet</p>
+          <div className={Style.Modal_box_heading_img}>
+            <Image
+              src={images.close}
+              alt="logo"
+              width={50}
+              height={50}
+              onClick={() => setOpenModal(false)}
+            />
+          </div>
+        </div>
+        
+        <div className={Style.Modal_box_wallet}>
+          {walletMenu.map((el, i) => (
+            <p key={i+1} onClick={() => connectWallet()}>
+              {el}
+            </p>
+          ))}
+        </div>
+
+        <p className={Style.Modal_box_para}>
+          By connecting a wallet, you agree to Uniswap Labs’
+          <br /> Terms of Service and consent to its Privacy Policy.
+        </p>
+      </div>
+    </div>
   )
 }
 
