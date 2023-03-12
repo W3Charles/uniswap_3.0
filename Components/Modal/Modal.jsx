@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Style from './Modal.module.css';
 import images from './,,/../assets';
 
-const Modal = () => {
+const Modal = ({ setOpenModal, connectWallet }) => {
   //USESTATE
   const walletMenu = ["MetaMask", "Coinbase", "Wallet", "WalletConnect"];
   
