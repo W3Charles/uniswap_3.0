@@ -6,6 +6,9 @@ import Style from './Modal.module.css';
 import images from './,,/../assets';
 
 const Modal = () => {
+  //USESTATE
+  const walletMenu = ["MetaMask", "Coinbase", "Wallet", "WalletConnect"];
+  
   return (
     <div>Modal</div>
   )
