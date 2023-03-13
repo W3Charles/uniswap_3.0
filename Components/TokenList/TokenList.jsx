@@ -15,6 +15,9 @@ const TokenList = ({ tokenDate, setOpenTokenBox }) => {
       >
         <Image src={images.close} alt="close" width={50} height={50} /> 
       </p>
+      <div className={Style.TokenList_title}>
+        <h2>Your Token List</h2>
+      </div>
     </div>
   )
 }
