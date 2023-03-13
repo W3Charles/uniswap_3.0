@@ -5,7 +5,7 @@ import Link from 'next/link';
 //INTERNAL IMPORTS
 import Style from './NavBar.module.css';
 import images from '../../assets';
-import { Modal, TOkenList } from '../index';
+import { Modal, TokenList } from '../index';
 
 const NavBar = () => {
   const menuItems = [
