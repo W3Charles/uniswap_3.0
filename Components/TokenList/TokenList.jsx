@@ -18,6 +18,19 @@ const TokenList = ({ tokenDate, setOpenTokenBox }) => {
       <div className={Style.TokenList_title}>
         <h2>Your Token List</h2>
       </div>
+
+     {data.map((el, i) => (
+      <div className={Style.TokenList_box}>
+        <div className={Style.TokenList_box_info}>
+          <p className={Style.TokenList_box_info_symbol}>
+            HEY
+          </p>
+          <p>
+            <span>34</span> GOLD COIN
+          </p>
+        </div>
+      </div>
+     ))}
     </div>
   )
 }
