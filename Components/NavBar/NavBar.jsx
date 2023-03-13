@@ -74,7 +74,7 @@ const NavBar = () => {
       </div>
 
       {/* TOKENLIST COMPONENT */}
-      {!openTokenBox && (
+      {openTokenBox && (
         <TokenList tokenDate="hey" setOpenTokenBox={setOpenTokenBox} />
       )}
     </div>
