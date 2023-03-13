@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Style from './TokenList.module.css';
 import images from '../../assets';
 
-const TokenList = () => {
+const TokenList = ({ tokenDate, setOpenTokenBox }) => {
   return (
     <div>TokenList</div>
   )
