@@ -6,7 +6,7 @@ import { HeroSection } from '../Components/index';
 const Home = () => {
   return (
     <div>
-      Home
+      <HeroSection />
     </div>
   )
 }
