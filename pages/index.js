@@ -6,7 +6,7 @@ import { HeroSection } from '../Components/index';
 const Home = () => {
   return (
     <div>
-      <HeroSection />
+      <HeroSection accounts="hey" tokenData="DATA"/>
     </div>
   )
 }
