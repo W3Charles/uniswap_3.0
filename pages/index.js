@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useContext, useEffect } from 'react';
+
 
 const Home = () => {
   return (
