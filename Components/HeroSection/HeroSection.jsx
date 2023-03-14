@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HeroSection = () => {
+const HeroSection = ({ accounts, tokenData }) => {
   return (
     <div>HeroSection</div>
   )
