@@ -7,7 +7,7 @@ import images from '../../assets';
 import { Toggle } from '../index';
 import { ST } from 'next/dist/shared/lib/utils';
 
-const Token = ({ openSetting }) => {
+const Token = ({ setOpenSetting }) => {
   return (
     <div className={Style.Token}>
         <div className={Style.Token_box}>
