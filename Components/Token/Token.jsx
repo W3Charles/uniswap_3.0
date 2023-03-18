@@ -41,6 +41,12 @@ const Token = ({ setOpenSetting }) => {
                 <button>minutes</button>
             </div>
 
+            <h2>Interface Setting</h2>
+
+            <div className={Style.Token_box_toggle}>
+                <p className={Style.Token_box_para}> Transaction deadline </p>
+                <Toggle />
+            </div>
         </div>
     </div>
   )
