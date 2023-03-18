@@ -21,6 +21,10 @@ const Token = ({ setOpenSetting }) => {
                     onClick={() => setOpenSetting(false)}
                 />
             </div>
+            <p className={Style.Token_box_para}>
+                Slippage tolerance{""}
+                <Image src={images.lock} alt="img" width={20} height={20} />
+            </p>
         </div>
     </div>
   )
