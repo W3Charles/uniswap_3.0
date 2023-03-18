@@ -25,6 +25,22 @@ const Token = ({ setOpenSetting }) => {
                 Slippage tolerance{""}
                 <Image src={images.lock} alt="img" width={20} height={20} />
             </p>
+
+            <div className={Style.Token_box_input}>
+                <button>Auto</button>
+                <input type="text" placeholder="0.10%"/>
+            </div>
+
+            <p className={Style.Token_box_para}>
+                Slippage tolerance{""}
+                <Image src={images.lock} alt="img" width={20} height={20} />
+            </p>
+
+            <div className={Style.Token_box_input}>
+                <input type="text" placeholder="0.10%"/>
+                <button>minutes</button>
+            </div>
+
         </div>
     </div>
   )
