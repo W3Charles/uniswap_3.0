@@ -13,7 +13,7 @@ const HeroSection = ({ accounts, tokenData }) => {
   const [openTokensTwo, setOpenTokensTwo] = useState(false);
 
   //TOKEN 1
-  const [tokenOne, setTokeOne] = useState({
+  const [tokenOne, setTokenOne] = useState({
     name: "",
     image: "",
   });
