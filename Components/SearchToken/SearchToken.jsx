@@ -5,7 +5,7 @@ import image from 'next/image';
 import Style from './SearchToken.module.css';
 import images from '../../assets';
 
-const SearchToken = () => {
+const SearchToken = ({ openToken, tokens, tokenData }) => {
   return (
     <div>SearchToken</div>
   )
