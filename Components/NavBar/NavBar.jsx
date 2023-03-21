@@ -25,7 +25,8 @@ const NavBar = () => {
 
   //USESTATE
   const [openModal, setOpenModal] = useState(false);
-  const [openTokenBox, setOpenTokenBox] = useState(false)
+  const [openTokenBox, setOpenTokenBox] = useState(false);
+  const [account, setAccount] = useState(false);
   
   return (
     <div className={Style.NavBar}>
@@ -65,7 +66,13 @@ const NavBar = () => {
             </div>
             <p>Network Name</p>
           </div>
-          <button onClick={() => setOpenModal(true)}> Address </button>
+          {
+            account ? (
+              <button onClick={() => setOpenModal(true)}>Address</button>
+            ) : (
+              <button onClick={() => setOpenTokenBox(true)}>Address</button>
+            )
+          }
           
           {openModal && (
             <Modal setOpenModal={setOpenModal} connectWallet="Connect" />
