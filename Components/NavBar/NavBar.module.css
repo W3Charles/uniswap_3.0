@@ -1,4 +1,4 @@
-.NavBar{
+.NavBar {
     width: 90%;
     margin:  2rem auto;
 }
@@ -76,7 +76,7 @@
     color: #cff80b;
 }
 
-.NavBar_box_right button{
+.NavBar_box_right button {
     background-color: #1e1e1e;
     border: none;
     outline: none;
