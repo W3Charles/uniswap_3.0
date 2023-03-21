@@ -68,9 +68,9 @@ const NavBar = () => {
           </div>
           {
             account ? (
-              <button onClick={() => setOpenModal(true)}>Address</button>
+              <button onClick={() => setOpenModal(true)}>Connect</button>
             ) : (
-              <button onClick={() => setOpenTokenBox(true)}>Address</button>
+              <button onClick={() => setOpenTokenBox(true)}>0xhdhere343ddxdi..</button>
             )
           }
           
