@@ -19,7 +19,7 @@ const HeroSection = ({ accounts, tokenData }) => {
   });
 
   //TOKEN 2
-  const [tokenTwo, setTokeTwo] = useState({
+  const [tokenTwo, setTokenTwo] = useState({
     name: "",
     image: "",
   });
