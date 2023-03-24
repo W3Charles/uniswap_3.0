@@ -4,3 +4,14 @@ pragma abicoder v2;
 
 import "@uniswap/v3-periphery/contracts/libraries/TransferHelper.sol";
 import "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
+
+contract SingleSwapToken {
+    ISwapRouter public constant swapRouter = 
+        ISwapRouter(0xE592427A0AEce92De3Edee1F18E0157C05861564);
+    
+    address public constant DAI = 0x2bcAE8205a77dabB2479CF2c85ded7d963101B86;
+    address public constant WETH9 = 0xEF1DACBce5194C668BEe55f2ca599F366709db0C;
+    address public constant USDC = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+
+    function swapExactInputString
+}
