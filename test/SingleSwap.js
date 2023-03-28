@@ -25,10 +25,10 @@ describe("SingleSwapToken", () => {
     dai = await ethers.getContractAt("IERC20", DAI);
     usdc = await ethers.getContractAt("IERC20", USDC);
 
-    console.log(weth);
-    console.log(dai);
-    console.log(usdc);
-    console.log(accounts);
-    console.log(singleSwapToken);
+    // console.log(weth);
+    // console.log(dai);
+    // console.log(usdc);
+    // console.log(accounts);
+    // console.log(singleSwapToken);
   });
 });
