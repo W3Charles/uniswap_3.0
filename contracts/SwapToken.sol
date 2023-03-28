@@ -15,9 +15,14 @@ contract SingleSwapToken {
 
     function swapExactInputSingle (uint amountIn) 
         external 
-        returns(uint amountOut) 
+        returns (uint amountOut) 
     {
-        TransferHelper.safeTransferFrom(WETH9, msg.sender, address(this), amountIn);
+        TransferHelper.safeTransferFrom(
+            WETH9, 
+            msg.sender, 
+            address(this), 
+            amountIn
+        );
 
         TransferHelper.safeApprove(WETH9, address(swapRouter), amountIn);
 
