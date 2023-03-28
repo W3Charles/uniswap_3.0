@@ -40,7 +40,7 @@ contract SingleSwapToken {
         amountOut = swapRouter.exactInputSingle(params);
     }
 
-    function swapExactInputString(uint amountOut, uint amountInMaximum) external returns(uint amountIn) {
+    function swapExactOutputSingle(uint amountOut, uint amountInMaximum) external returns(uint amountIn) {
     
         TransferHelper.safeTransferFrom(WETH9, msg.sender, address(this), amountInMaximum);
 
