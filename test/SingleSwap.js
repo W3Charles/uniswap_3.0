@@ -31,4 +31,18 @@ describe("SingleSwapToken", () => {
     // console.log(accounts);
     // console.log(singleSwapToken);
   });
+
+  it("swapExactInputSingle", async () => {
+    const amountIn = 10n ** 18n;
+
+    // Deposit WETH
+    // await weth.deposit({ value: amountIn });
+    // await weth.approve(singleSwapToken.address, wethAmountInMAx)
+
+    console.log(weth);
+    console.log(dai);
+    console.log(usdc);
+    console.log(accounts);
+    console.log(singleSwapToken);
+  });
 });
