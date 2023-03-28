@@ -13,8 +13,10 @@ contract SingleSwapToken {
     address public constant WETH9 = 0xEF1DACBce5194C668BEe55f2ca599F366709db0C;
     address public constant USDC = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
 
-    function swapExactInputString (uint amountIn) external returns(uint amountOut) {
-        
+    function swapExactInputSingle (uint amountIn) 
+        external 
+        returns(uint amountOut) 
+    {
         TransferHelper.safeTransferFrom(WETH9, msg.sender, address(this), amountIn);
 
         TransferHelper.safeApprove(WETH9, address(swapRouter), amountIn);
