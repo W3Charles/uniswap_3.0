@@ -69,8 +69,11 @@ contract SingleSwapToken {
 
         if(amountIn < amountInMaximum) {
             TransferHelper.safeApprove(WETH9, address(swapRouter), 0);
-
-            TransferHelper.safeTransfer(WETH9, msg.sender, amountInMaximum - amountIn);
+            TransferHelper.safeTransfer(
+                WETH9, 
+                msg.sender, 
+                amountInMaximum - amountIn
+            );
         }
     }
 }
