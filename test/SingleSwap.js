@@ -40,7 +40,7 @@ describe("SingleSwapToken", () => {
     // await weth.approve(singleSwapToken.address, wethAmountInMAx)
 
     // Swap
-    await singleSwapToken.swapExactOutputSingle(amountIn);
+    await singleSwapToken.swapExactInputSingle(amountIn);
     console.log("DAI balance:", await dai.balanceOf(account[0].address));
 
     // console.log(weth);
