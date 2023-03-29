@@ -51,7 +51,7 @@ contract SingleSwapToken {
             address(this), 
             amountInMaximum
         );
-        TransferHelper.safeApprove(WETH9, address(this), amountInMaximum);
+        TransferHelper.safeApprove(WETH9, address(swapRouter), amountInMaximum);
 
         ISwapRouter.ExactOutputSingleParams memory params = 
             ISwapRouter.ExactOutputSingleParams({
