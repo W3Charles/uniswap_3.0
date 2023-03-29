@@ -53,8 +53,8 @@ contract SingleSwapToken {
         );
         TransferHelper.safeApprove(WETH9, address(swapRouter), amountInMaximum);
 
-        ISwapRouter.ExactOutputSingleParams memory params = 
-            ISwapRouter.ExactOutputSingleParams({
+        ISwapRouter.ExactOutputSingleParams memory params = ISwapRouter
+            .ExactOutputSingleParams({
                 tokenIn: WETH9,
                 tokenOut: DAI,
                 fee: 3000,
