@@ -1,4 +1,5 @@
 const { expect } = require("chai");
+const { Signer } = require("ethers");
 const { ethers } = require("hardhat");
 
 const DAI = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
@@ -34,5 +35,19 @@ describe("SingleSwapToken", () => {
     // Swap
     await singleSwapToken.swapExactInputSingle(amountIn);
     console.log("DAI balance", await dai.balanceOf(accounts[0].address));
+  });
+
+  it("swapExactOutputSingle", async () => {
+    const wethAmountInMax = 10n ** 18n;
+    const daiAmountOut = 100n * 10n ** 18n;
+
+    //DEPOSIT WETH
+    await weth.deposit({ value: wethAmountInMax });
+    await weth.approve(singleSwapToken.adress, wethAmountInMax);
+
+    //SWAP
+    await singleSwapToken.swapExactOutputSingle(daiAmountOut, wethAmountInMax);
+    console.log(accounts[0].address);
+    console.log("Dai balance", await dai.balanceOf(accounts[0].address));
   });
 });
