@@ -43,7 +43,7 @@ describe("SingleSwapToken", () => {
 
     //DEPOSIT WETH
     await weth.deposit({ value: wethAmountInMax });
-    await weth.approve(singleSwapToken.adress, wethAmountInMax);
+    await weth.approve(singleSwapToken.address, wethAmountInMax);
 
     //SWAP
     await singleSwapToken.swapExactOutputSingle(daiAmountOut, wethAmountInMax);
