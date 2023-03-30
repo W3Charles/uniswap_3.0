@@ -17,19 +17,11 @@ describe("SingleSwapToken", () => {
 
     const SingleSwapToken = await ethers.getContractFactory("SingleSwapToken");
     singleSwapToken = await SingleSwapToken.deploy();
-
     await singleSwapToken.deployed();
 
-    //Once deployed, update variables
     weth = await ethers.getContractAt("IWETH", WETH9);
     dai = await ethers.getContractAt("IERC20", DAI);
     usdc = await ethers.getContractAt("IERC20", USDC);
-
-    // console.log(weth);
-    // console.log(dai);
-    // console.log(usdc);
-    // console.log(accounts);
-    // console.log(singleSwapToken);
   });
 
   it("swapExactInputSingle", async () => {
@@ -42,11 +34,5 @@ describe("SingleSwapToken", () => {
     // Swap
     await singleSwapToken.swapExactInputSingle(amountIn);
     console.log("DAI balance", await dai.balanceOf(accounts[0].address));
-
-    // console.log(weth);
-    // console.log(dai);
-    // console.log(usdc);
-    // console.log(accounts);
-    // console.log(singleSwapToken);
   });
 });
