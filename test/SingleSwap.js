@@ -36,8 +36,8 @@ describe("SingleSwapToken", () => {
     const amountIn = 10n ** 18n;
 
     // Deposit WETH
-    // await weth.deposit({ value: amountIn });
-    // await weth.approve(singleSwapToken.address, wethAmountInMAx)
+    await weth.deposit({ value: amountIn });
+    await weth.approve(singleSwapToken.address, wethAmountInMAx);
 
     // Swap
     await singleSwapToken.swapExactInputSingle(amountIn);
