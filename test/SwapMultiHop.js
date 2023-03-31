@@ -25,31 +25,31 @@ describe("SwapMultiHop", () => {
     usdc = await ethers.getContractAt("IERC20", USDC);
   });
 
-  //   it("swapExactInputSingle", async () => {
-  //     const amountIn = 10n ** 18n;
+  it("swapExactInputMultihop", async () => {
+    const amountIn = 10n ** 18n;
 
-  //     // Deposit WETH
-  //     await weth.deposit({ value: amountIn });
-  //     await weth.approve(swapMultiHop.address, amountIn);
+    // Deposit WETH
+    await weth.deposit({ value: amountIn });
+    await weth.approve(swapMultiHop.address, amountIn);
 
-  //     // Swap
-  //     await swapMultiHop.swapExactInputSingle(amountIn);
-  //     console.log("DAI balance", await dai.balanceOf(accounts[0].address));
-  //   });
+    // Swap
+    await swapMultiHop.swapExactInputMultihop(amountIn);
+    console.log("DAI balance", await dai.balanceOf(accounts[0].address));
+  });
 
-  //   it("swapExactOutputSingle", async () => {
-  //     const wethAmountInMax = 10n ** 18n;
-  //     const daiAmountOut = 100n * 10n ** 18n;
+  // it("swapExactOutputSingle", async () => {
+  //   const wethAmountInMax = 10n ** 18n;
+  //   const daiAmountOut = 100n * 10n ** 18n;
 
-  //     //DEPOSIT WETH
-  //     await weth.deposit({ value: wethAmountInMax });
-  //     await weth.approve(swapMultiHop.address, wethAmountInMax);
+  //   //DEPOSIT WETH
+  //   await weth.deposit({ value: wethAmountInMax });
+  //   await weth.approve(swapMultiHop.address, wethAmountInMax);
 
-  //     //SWAP
-  //     await swapMultiHop.swapExactOutputSingle(daiAmountOut, wethAmountInMax);
-  //     console.log(accounts[0].address);
-  //     console.log(accounts[1].address);
-  //     // console.log("Dai balance", await dai.balanceOf(accounts[0].address));
-  //     // console.log("Dai balance", await dai.balanceOf(accounts[1].address));
-  //   });
+  //   //SWAP
+  //   await swapMultiHop.swapExactOutputSingle(daiAmountOut, wethAmountInMax);
+  //   console.log(accounts[0].address);
+  //   console.log(accounts[1].address);
+  //   // console.log("Dai balance", await dai.balanceOf(accounts[0].address));
+  //   // console.log("Dai balance", await dai.balanceOf(accounts[1].address));
+  // });
 });
