@@ -37,19 +37,19 @@ describe("SwapMultiHop", () => {
     console.log("DAI balance", await dai.balanceOf(accounts[0].address));
   });
 
-  // it("swapExactOutputSingle", async () => {
-  //   const wethAmountInMax = 10n ** 18n;
-  //   const daiAmountOut = 100n * 10n ** 18n;
+  it("swapExactOutputMultihop", async () => {
+    const wethAmountInMax = 10n ** 18n;
+    const daiAmountOut = 100n * 10n ** 18n;
 
-  //   //DEPOSIT WETH
-  //   await weth.deposit({ value: wethAmountInMax });
-  //   await weth.approve(swapMultiHop.address, wethAmountInMax);
+    //DEPOSIT WETH
+    await weth.deposit({ value: wethAmountInMax });
+    await weth.approve(swapMultiHop.address, wethAmountInMax);
 
-  //   //SWAP
-  //   await swapMultiHop.swapExactOutputSingle(daiAmountOut, wethAmountInMax);
-  //   console.log(accounts[0].address);
-  //   console.log(accounts[1].address);
-  //   // console.log("Dai balance", await dai.balanceOf(accounts[0].address));
-  //   // console.log("Dai balance", await dai.balanceOf(accounts[1].address));
-  // });
+    //SWAP
+    await swapMultiHop.swapExactOutputMultihop(daiAmountOut, wethAmountInMax);
+    console.log(accounts[0].address);
+    // console.log(accounts[1].address);
+    console.log("Dai balance", await dai.balanceOf(accounts[0].address));
+    // console.log("Dai balance", await dai.balanceOf(accounts[1].address));
+  });
 });
