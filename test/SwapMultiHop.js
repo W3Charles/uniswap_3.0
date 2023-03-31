@@ -16,8 +16,8 @@ describe("SwapMultiHop", () => {
   before(async () => {
     accounts = await ethers.getSigners(1);
 
-    const swapMultiHop = await ethers.getContractFactory("swapMultiHop");
-    swapMultiHop = await swapMultiHop.deploy();
+    const SwapMultiHop = await ethers.getContractFactory("SwapMultiHop");
+    swapMultiHop = await SwapMultiHop.deploy();
     await swapMultiHop.deployed();
 
     weth = await ethers.getContractAt("IWETH", WETH9);
