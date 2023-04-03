@@ -1,6 +1,6 @@
 import booToken from "./BooToken.json";
 import lifeToken from "./LifeToken.json";
-import singleSWapToken from "./SingleSwapToken.json";
+import singleSwapToken from "./SingleSwapToken.json";
 import swapMultiHop from "./SwapMultiHop.json";
 
 // BOO TOKEN
