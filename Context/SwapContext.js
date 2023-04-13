@@ -29,9 +29,12 @@ export const SwapTokenContextProvider = ({ children }) => {
     const [tokenData, setTokenData] = useState([]);
 
     const addToken = [ 
+        // IWETH TOKEN
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        "0x9e7F7d0E8b8F38e3CF2b3F7dd362ba2e9E82baa4",
-        "0x0724F18B2aA7D6413D3fDcF6c0c27458a8170Dd9",
+        // BOO TOKEN
+        "0x6D712CB50297b97b79dE784d10F487C00d7f8c2C",
+        // LIFE TOKEN
+        "0x04F339eC4D75Cf2833069e6e61b60eF56461CD7C",
     ];
 
     // FETCH DATA - DISPLAY USER WALLET BALANCE, ETC.
@@ -53,10 +56,28 @@ export const SwapTokenContextProvider = ({ children }) => {
             setEther(ethValue);
            
             // ALL TOKEN DATA & BALANCES
-            addToken.map((el, i) => {
+            addToken.map(async (el, i) => {
+
                 // GET CONTRACT
                 const contract = new ethers.Contract(el, ERC20.abi, provider);
-                console.log(contract);
+
+                // GET TOKEN BALANCE
+                const userBalance = await contract.balanceOf(userAccount);
+                const tokenLeft = BigNumber.from(userBalance).toString();
+                const convertTokenBal = ethers.utils.formatEther(tokenLeft);
+
+                // GET NAME & SYMBOL
+                const symbol = await contract.symbol();
+                const name= await contract.name();
+
+                tokenData.push({
+                    name: name,
+                    symbol: symbol,
+                    tokenBalance: convertTokenBal,
+                    tokenAddress: el,
+                });
+
+                console.log(tokenData);
             })
 
         } catch (error) {
