@@ -13,4 +13,4 @@ const MyApp = ({ Component, pageProps }) => (
   </div>
 )
 
-export default MyApp
+export default MyApp;

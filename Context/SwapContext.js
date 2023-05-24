@@ -32,9 +32,9 @@ export const SwapTokenContextProvider = ({ children }) => {
         // IWETH TOKEN
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         // BOO TOKEN
-        "0x6D712CB50297b97b79dE784d10F487C00d7f8c2C",
+        "0xc30B9Bb2E6849Ab9bbFe5c6b253D8f0b8f48ADaA",
         // LIFE TOKEN
-        "0x04F339eC4D75Cf2833069e6e61b60eF56461CD7C",
+        "0x3647d1CEc068C260368a89a3e877bacfe1E43275",
     ];
 
     // FETCH DATA - DISPLAY USER WALLET BALANCE, ETC.
